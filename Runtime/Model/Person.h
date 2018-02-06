@@ -7,13 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "score.h"
+#import "subject.h"
 
 @interface Person : NSObject
 /// 名字
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, copy) NSString *name;
 
 /// 年龄
-@property (nonatomic, assign) NSInteger age;
+@property (nonatomic, copy) NSString *age;
+
+@property (nonatomic, strong) score *score;
+
+@property (nonatomic, strong) NSArray <subject*>*subjectArray;
 
 - (void)run;
 

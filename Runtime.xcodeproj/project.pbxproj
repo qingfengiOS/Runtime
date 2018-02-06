@@ -17,6 +17,9 @@
 		8566F7AE2024094B0078CDB2 /* RuntimeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8566F7AD2024094B0078CDB2 /* RuntimeUITests.m */; };
 		8566F7BF202409B80078CDB2 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 8566F7BE202409B80078CDB2 /* Person.m */; };
 		8566F7C2202409D70078CDB2 /* NSObject+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 8566F7C1202409D70078CDB2 /* NSObject+Property.m */; };
+		8566F7C6202413D20078CDB2 /* NSObject+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8566F7C5202413D20078CDB2 /* NSObject+Model.m */; };
+		8582CF572029498B00FA91C1 /* score.m in Sources */ = {isa = PBXBuildFile; fileRef = 8582CF562029498B00FA91C1 /* score.m */; };
+		8582CF5A20294CE100FA91C1 /* subject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8582CF5920294CE100FA91C1 /* subject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,12 @@
 		8566F7BE202409B80078CDB2 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		8566F7C0202409D70078CDB2 /* NSObject+Property.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Property.h"; sourceTree = "<group>"; };
 		8566F7C1202409D70078CDB2 /* NSObject+Property.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Property.m"; sourceTree = "<group>"; };
+		8566F7C4202413D20078CDB2 /* NSObject+Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Model.h"; sourceTree = "<group>"; };
+		8566F7C5202413D20078CDB2 /* NSObject+Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Model.m"; sourceTree = "<group>"; };
+		8582CF552029498B00FA91C1 /* score.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = score.h; sourceTree = "<group>"; };
+		8582CF562029498B00FA91C1 /* score.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = score.m; sourceTree = "<group>"; };
+		8582CF5820294CE100FA91C1 /* subject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subject.h; sourceTree = "<group>"; };
+		8582CF5920294CE100FA91C1 /* subject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +154,10 @@
 			children = (
 				8566F7BD202409B80078CDB2 /* Person.h */,
 				8566F7BE202409B80078CDB2 /* Person.m */,
+				8582CF552029498B00FA91C1 /* score.h */,
+				8582CF562029498B00FA91C1 /* score.m */,
+				8582CF5820294CE100FA91C1 /* subject.h */,
+				8582CF5920294CE100FA91C1 /* subject.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +167,8 @@
 			children = (
 				8566F7C0202409D70078CDB2 /* NSObject+Property.h */,
 				8566F7C1202409D70078CDB2 /* NSObject+Property.m */,
+				8566F7C4202413D20078CDB2 /* NSObject+Model.h */,
+				8566F7C5202413D20078CDB2 /* NSObject+Model.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -293,7 +308,10 @@
 			files = (
 				8566F78E2024094B0078CDB2 /* ViewController.m in Sources */,
 				8566F7992024094B0078CDB2 /* main.m in Sources */,
+				8582CF572029498B00FA91C1 /* score.m in Sources */,
 				8566F7BF202409B80078CDB2 /* Person.m in Sources */,
+				8582CF5A20294CE100FA91C1 /* subject.m in Sources */,
+				8566F7C6202413D20078CDB2 /* NSObject+Model.m in Sources */,
 				8566F7C2202409D70078CDB2 /* NSObject+Property.m in Sources */,
 				8566F78B2024094B0078CDB2 /* AppDelegate.m in Sources */,
 			);

@@ -13,6 +13,8 @@
 #import <objc/message.h>
 
 #import "NSObject+Property.h"
+#import "NSObject+Model.h"
+#import "subject.h"
 @interface ViewController ()
 
 @end
@@ -31,15 +33,18 @@
     [self addPropertyForCategory];
     
     [self printDic];
+    
+    [self dicToModel];
 }
 
+#pragma mark - 方法交换
 /**
  实例方法交换
  */
 - (void)instanceMethodExchange {
     Person *p = [[Person alloc]init];
     p.name = @"张三";
-    p.age = 18;
+    p.age = @"18";
     
     [p run];
     [p study];
@@ -73,7 +78,7 @@
     
 }
 
-
+#pragma mark - 获取成员变量
 /**
  获取成员变量
  */
@@ -91,9 +96,9 @@
     }
 }
 
-
+#pragma mark - 给分类添加属性
 /**
- 通过字典定义属性
+ 通过定义属性
  */
 - (void)addPropertyForCategory {
     NSLog(@"................分割线................");
@@ -102,6 +107,10 @@
     NSLog(@"%@",obj.propertyName);
 }
 
+#pragma mark - 通过字典生成属性字符串
+/**
+ 通过字典生成属性字符串
+ */
 - (void)printDic {
     NSLog(@"................分割线................");
     NSDictionary *testDic = @{@"name" : @"情风",
@@ -110,6 +119,28 @@
                               };
     [NSObject printDic:testDic];
     
+    
+    
+}
+
+- (void)dicToModel {
+    NSLog(@"................分割线................");
+    NSDictionary *testDic = @{@"name" : @"情风",
+                              @"age" : @"18",
+                              @"score" : @{@"chinese" : @(90),@"math" : @"100"},
+                              @"subjectArray" : @[@{@"subjectName":@"体育",@"option":@"1"},@{@"subjectName":@"外语",@"option":@"0"},@{@"subjectName":@"美术",@"option":@"1"},],
+                              };
+    
+    Person *person = [Person modelByDic:testDic];
+    
+    NSMutableArray *tempArray = [NSMutableArray array];
+    for (NSDictionary *dic in testDic[@"subjectArray"]) {
+        subject *s = [subject modelByDic:dic];
+        [tempArray addObject:s];
+    }
+    person.subjectArray = [NSArray arrayWithArray:tempArray];
+    
+    NSLog(@"%@-%ld-%@-%ld-%@",person.name,(long)person.age,person.score.math,person.score.chinese,person.subjectArray);
 }
 
 @end
