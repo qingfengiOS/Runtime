@@ -123,6 +123,7 @@
     
 }
 
+#pragma mark - 字典转模型
 - (void)dicToModel {
     NSLog(@"................分割线................");
     NSDictionary *testDic = @{@"name" : @"情风",
@@ -140,7 +141,7 @@
     }
     person.subjectArray = [NSArray arrayWithArray:tempArray];
     
-    NSLog(@"%@-%ld-%@-%ld-%@",person.name,(long)person.age,person.score.math,person.score.chinese,person.subjectArray);
+    NSLog(@"%@-%@-%@-%ld-%@",person.name,person.age,person.score.math,person.score.chinese,person.subjectArray);
 }
 
 @end
