@@ -8,14 +8,16 @@
 
 #import "ViewController.h"
 #import "Person.h"
-
-#import <objc/runtime.h>
 #import <objc/message.h>
 
 #import "NSObject+Property.h"
 #import "NSObject+Model.h"
 #import "subject.h"
+
+#import "NSObject+KVO.h"
 @interface ViewController ()
+
+@property (nonatomic, strong) Person *p;
 
 @end
 
@@ -35,6 +37,8 @@
     [self printDic];
     
     [self dicToModel];
+    
+    [self customKVO];
 }
 
 #pragma mark - 方法交换
@@ -42,21 +46,21 @@
  实例方法交换
  */
 - (void)instanceMethodExchange {
-    Person *p = [[Person alloc]init];
-    p.name = @"张三";
-    p.age = @"18";
+    _p = [[Person alloc]init];
+    _p.name = @"张三";
+    _p.age = @"18";
     
-    [p run];
-    [p study];
+    [_p run];
+    [_p study];
     
-    Method m = class_getInstanceMethod([p class], @selector(run));
-    Method m2 = class_getInstanceMethod([p class], @selector(study));
+    Method m = class_getInstanceMethod([_p class], @selector(run));
+    Method m2 = class_getInstanceMethod([_p class], @selector(study));
     
     method_exchangeImplementations(m, m2);
     
     NSLog(@"................分割线................");
-    [p run];
-    [p study];
+    [_p run];
+    [_p study];
 }
 
 /**
@@ -142,6 +146,19 @@
     person.subjectArray = [NSArray arrayWithArray:tempArray];
     
     NSLog(@"%@-%@-%@-%ld-%@",person.name,person.age,person.score.math,person.score.chinese,person.subjectArray);
+}
+
+#pragma mark - 自定义KVO
+- (void)customKVO {
+    [self.p qf_addObserver:self forKey:@"name" withBlock:^(id object, NSString *observerKey, id oldValue, id newValue) {
+        NSLog(@"newValue = %@", newValue);
+    }];
+}
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    _p.name = [NSString stringWithFormat:@"%d",arc4random_uniform(1000)];
+    
 }
 
 @end

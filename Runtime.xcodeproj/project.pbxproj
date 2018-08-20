@@ -20,6 +20,7 @@
 		8566F7C6202413D20078CDB2 /* NSObject+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8566F7C5202413D20078CDB2 /* NSObject+Model.m */; };
 		8582CF572029498B00FA91C1 /* score.m in Sources */ = {isa = PBXBuildFile; fileRef = 8582CF562029498B00FA91C1 /* score.m */; };
 		8582CF5A20294CE100FA91C1 /* subject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8582CF5920294CE100FA91C1 /* subject.m */; };
+		FD9CDCA4212A5584009ED56C /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9CDCA3212A5584009ED56C /* NSObject+KVO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		8582CF562029498B00FA91C1 /* score.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = score.m; sourceTree = "<group>"; };
 		8582CF5820294CE100FA91C1 /* subject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subject.h; sourceTree = "<group>"; };
 		8582CF5920294CE100FA91C1 /* subject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subject.m; sourceTree = "<group>"; };
+		FD9CDCA2212A5584009ED56C /* NSObject+KVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVO.h"; sourceTree = "<group>"; };
+		FD9CDCA3212A5584009ED56C /* NSObject+KVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +172,8 @@
 				8566F7C1202409D70078CDB2 /* NSObject+Property.m */,
 				8566F7C4202413D20078CDB2 /* NSObject+Model.h */,
 				8566F7C5202413D20078CDB2 /* NSObject+Model.m */,
+				FD9CDCA2212A5584009ED56C /* NSObject+KVO.h */,
+				FD9CDCA3212A5584009ED56C /* NSObject+KVO.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				8566F7C6202413D20078CDB2 /* NSObject+Model.m in Sources */,
 				8566F7C2202409D70078CDB2 /* NSObject+Property.m in Sources */,
 				8566F78B2024094B0078CDB2 /* AppDelegate.m in Sources */,
+				FD9CDCA4212A5584009ED56C /* NSObject+KVO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DZK6T3AW3W;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Runtime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -493,6 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DZK6T3AW3W;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Runtime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
